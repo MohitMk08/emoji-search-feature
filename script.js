@@ -4,7 +4,7 @@ let filterEmg = document.getElementById("filter-emogi");
 
 filterEmg.addEventListener("click", (e) => {
     const button = e.target.closest(".filter-btn");
-    
+
     if (button) {
         e.preventDefault();
         const category = button.getAttribute("data-category");
@@ -60,42 +60,8 @@ searchemg.addEventListener('keyup', (event) => {
 });
 
 displayEmg.addEventListener("click", (e) => {
-     navigator.clipboard.writeText(e.target.innerText);
+    navigator.clipboard.writeText(e.target.innerText);
 
-     alert("Copied to clipboard");
-    console.log( e.target);
+    alert("Copied to clipboard");
+    console.log(e.target);
 });
-
-// displayEmg.addEventListener("click", (e) => {
-//   if (e.target.nodeName === "IMG") {
-//     let val = e.target.alt;
-//     navigator.clipboard.writeText(val);
-//     Toastify({
-//       text: "Emojee copied",
-//       className: "info",
-//       close: true,
-//       style: {
-//         background: "linear-gradient(to right, #00b09b, #96c93d)",
-//       },
-//     }).showToast();
-//   }
-// });
-
-// const listOfEmojis = ["😀", "😎", "❤️", "📚", "✋", "⚽", "🚩"]; // Add more emojis as needed
-
-// const randomEmojiGenerator = () => {
-//     let randomIndex = Math.floor(Math.random() * listOfEmojis.length);
-//     let randomEmoji = listOfEmojis[randomIndex];
-//     let randomEmojiElement = document.getElementById("random-emogi");
-
-//     if (randomEmojiElement) {
-//         // Update the alt attribute for accessibility
-//         randomEmojiElement.alt = randomEmoji;
-//         // Update the source for the image element
-//         randomEmojiElement.src = `path-to-your-emoji-images/${randomEmoji}.png`;
-
-//         setTimeout(randomEmojiGenerator, 3000);
-//     }
-// };
-
-// randomEmojiGenerator();
